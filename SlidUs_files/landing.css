@@ -19,6 +19,7 @@
 .for-who-container {
   display: inline-block;
   height: 3rem;
+  width: 100vw;
   -webkit-transform: translateY(16px);
   transform: translateY(16px);
 }
@@ -34,6 +35,7 @@
   .for-who-container {
     -webkit-transform: translateY(17px);
     transform: translateY(17px);
+    width: 14rem;
   }
 }
 
@@ -41,6 +43,7 @@
   .for-who-container {
     -webkit-transform: translateY(6px);
     transform: translateY(6px);
+    width: 18rem;
   }
 }
 

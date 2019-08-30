@@ -1,17 +1,12 @@
-window.onresize = handleResize;
 forWhoAnimation();
 nextSlideAnimation();
 pollSlideAnimation();
 bankcardAnimation();
 editorAnimation();
 
-function handleResize() {
-  setForWhoParentWidthAnimation();
-}
 
 function forWhoAnimation() {
   prepareAnimation();
-  setForWhoParentWidthAnimation();
   anime.timeline({
     easing: 'easeOutQuad',
     duration: 200
@@ -123,24 +118,6 @@ function forWhoAnimation() {
   }, '-=700');
 }
 
-function setForWhoParentWidthAnimation() {
-  var container = document.getElementById("for-who-container");
-  var letters = 0;
-  var width = 0;
-  var forWhos = document.getElementsByClassName('for-who');
-
-  for (var i = 0; i < forWhos.length; i++) {
-    var who = forWhos[i];
-
-    if (who.childNodes.length > letters) {
-      letters = who.childNodes.length;
-      width = who.scrollWidth;
-    }
-  }
-
-  console.log(letters);
-  container.style.width = letters * width + "px";
-}
 /**
  * Changes each character in the tags to separate <span>-elements
  * Required for screenreaders
